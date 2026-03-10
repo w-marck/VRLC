@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm[toml]>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vrlc"
+dynamic = ["version"]
+description = "VagalumeRaceLightCycle - Validador de versionamento semântico baseado em ciclos de maturidade (F1 Style)."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name="Walter Marcondes" },
+]
+license = { text = "Apache-2.0" }
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache License 2.0",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "semantic_version>=2.10.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/w-marck/vrlc"
+"Bug Tracker" = "https://github.com/w-marck/vrlc/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]  # Procura pacotes em src/ — liberdade pra não poluir raiz
+namespaces = false
+
+[tool.setuptools_scm]
+write_to = "src/vrlc/_version.py"
+version_scheme = "release-branch-semver"
+local_scheme = "node-and-date"
+fallback_version = "0.0.1"

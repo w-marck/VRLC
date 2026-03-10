@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+
+# Ambientes Virtuais
+.venv/
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# MyPy
+.mypy_cache/
+
+src/vrlc/_version.py
+dist/
+build/
+src/*.egg-info/
